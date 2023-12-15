@@ -14,17 +14,28 @@
 
 import streamlit as st
 from streamlit.logger import get_logger
+import pandas as pd
+import requests
 
 LOGGER = get_logger(__name__)
 
 
 def run():
     st.set_page_config(
-        page_title="Hello",
+        page_title="Hello streamlit",
         page_icon="👋",
     )
 
     st.write("# Welcome to Streamlit! 👋")
+/workspaces/zoobwork/pages
+    
+    df = pd.DataFrame({
+      'first column': [1, 2, 3, 4],
+      'second column': [10, 20, 30, 40],
+      'third col': ['zb', 'lk', 'ga', 'mengr']
+    })
+
+    df
 
     st.sidebar.success("Select a demo above.")
 
